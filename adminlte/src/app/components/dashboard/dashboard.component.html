@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <app-content-header></app-content-header>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>{{installations}}</h3>
+                            <p>New Installations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-md-today"></i>
+                        </div>
+                        <a href="" class="small-box-footer">
+                            Ver
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>{{dailyEarnings}}</h3>
+                            <p>Earned today</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-md-cash"></i>
+                        </div>
+                        <a href="" class="small-box-footer">
+                            Ver
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>{{dailyRegistrations}}</h3>
+                            <p>Registered today</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-md-person-add"></i>
+                        </div>
+                        <a href="" class="small-box-footer">
+                            Ver
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>{{dailyRegistrations}}</h3>
+                            <p>Pending tickets</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-md-help-buoy"></i>
+                        </div>
+                        <a href="" class="small-box-footer">
+                            Ver
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <section class="col-lg-7 connectedSortable ui-sortable">
+                   <app-chart></app-chart>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>
