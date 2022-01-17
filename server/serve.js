@@ -4,7 +4,11 @@ const app = express();
 
 //
 app.set("port", process.env.PORT || 3000);
-//Morgan
+//node Middlewares
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 app.use(morgan("dev"));
+
+app.use("/users",require("./routes/users.routes"));
 
 module.exports= app;
