@@ -6,6 +6,7 @@ const userSchema = new Schema({
     ID: { type: Number, required: true },
     email: { type: String, default: "N/A" },
     address: { type: String, required: true },
+    city:{type:String, required:true},
     neighborhood: { type: String, default: "N/A" },
     phone: { type: Number, required: true },
 },{
