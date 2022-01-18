@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-content-header',
@@ -9,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class ContentHeaderComponent implements OnInit {
 
   public title: String;
-  constructor() {
-    this.title="Panel";
+  constructor(private titleService:Title) {
+    this.title="";
    }
 
   ngOnInit(): void {
+  }
+  setTitle(){
+    this.title=this.titleService.getTitle();
   }
 
 }

@@ -7,13 +7,13 @@ import { User } from "../models/user";
 })
 export class UserService {
 
-  URL_API = "http://localhost:3000/users";
-  users: User[] = [];
-
+  private URL_API = "http://localhost:3000/users";
+  public data:any;
+  users:User[]=[];
   constructor(private http: HttpClient) {
   }
 
   userList() {
-    return this.http.get<User[]>(this.URL_API);
+    return this.http.get<Object>(this.URL_API);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +13,8 @@ export class DashboardComponent implements OnInit {
   public dailyEarnings: Number;
   public dailyRegistrations: Number;
   public tickets: Number;
-  constructor() {
+  constructor(private titleService:Title ) {
+    this.titleService.setTitle("Dashboard - AdminLTE")
     this.installations = 999;
     this.dailyEarnings = 8888;
     this.dailyRegistrations = 22;

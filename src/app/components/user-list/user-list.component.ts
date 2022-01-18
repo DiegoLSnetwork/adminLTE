@@ -9,19 +9,20 @@ import { UserService } from "../../services/user.service";
 export class UserListComponent implements OnInit {
 
 
-  constructor( public userService: UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
     this.userList();
   }
 
-  userList(){
+  userList() {
     this.userService.userList().subscribe(
       res => {
-        this.userService.users = res;
+        this.userService.data = res;
+        this.userService.users=this.userService.data.users;
+        console.log(this.userService.data.title);
       },
       err => console.log(err)
     )
   }
-
 }

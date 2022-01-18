@@ -12,6 +12,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContentHeaderComponent } from './components/content-header/content-header.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ClientListComponent } from './components/clients/client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
     DashboardComponent,
     ContentHeaderComponent,
     ChartComponent,
-    UserListComponent
+    UserListComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,

@@ -6,8 +6,9 @@ const User= require("../models/user.model");
 //Controllers
 
 usersControllers.userList = async (req,res)=>{
+   let title="Client List"
    const users = await User.find();
-   res.json(users);
+   res.json({title,users});
 }
 usersControllers.getOne = (req,res)=>{
     res.send("getOne");
